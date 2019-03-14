@@ -1,0 +1,6 @@
+##ignore some cache files##
+
+.vscode/
+.idea/
+cmake-build-debug/
+*.exe
