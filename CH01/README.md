@@ -27,9 +27,22 @@
     第三个错误
 - [x] 1.9
 - [x] 1.10
-- [ ] 1.11
-- [ ] 1.12
-- [ ] 1.13
-- [ ] 1.14
-- [ ] 1.15
-- [ ] 1.16
+- [x] 1.11
+- [x] 1.12
+    -100 加到 100，结果为0
+- [x] 1.13
+- [x] 1.14
+    >The main difference between the for's and the while's is a matter of pragmatics: we usually use for when there is a known number of iterations, and use while constructs when the number of iterations in not known in advance. The while vs do ... while issue is also of pragmatics, the second executes the instructions once at start, and afterwards it behaves just like the simple while.
+    ---- https://stackoverflow.com/questions/2950931/for-vs-while-in-c-programming
+- [x] 1.15
+- [x] 1.16
+- [x] 1.17
+- [x] 1.18
+- [x] 1.19
+    见1.11
+- [x] 1.20
+- [ ] 1.21
+- [ ] 1.22
+- [ ] 1.23
+- [ ] 1.24
+- [ ] 1.25
