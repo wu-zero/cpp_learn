@@ -4,3 +4,4 @@
 .idea/
 cmake-build-debug/
 *.exe
+CMakeLists.txt
