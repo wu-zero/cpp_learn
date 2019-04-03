@@ -1,7 +1,14 @@
 # 第四章
-- [ ] 4.1
-- [ ] 4.2
-- [ ] 4.3
+- [x] 4.1
+    `105`
+- [x] 4.2
+    ```cpp
+    *(vec.begin())
+    (*(vec.begin())) + 1
+    ```
+
+- [x] 4.3
+    [参考](https://blog.csdn.net/wmaoshu/article/details/50115721)
 - [ ] 4.4
 - [ ] 4.5
 - [ ] 4.6
