@@ -9,17 +9,17 @@
 struct Sales_data
 {
     std::string bookNo;
-    unsigned units_sold = 0;
-    double price = 0.0;
-    double revenue = 0.0;
+    unsigned units_sold = 0; //总数
+    double revenue = 0.0; //总价
 };
 
 int main()
 {
     Sales_data book;
-    std::cin >> book.bookNo >> book.units_sold >> book.price;
-    book.revenue = book.price * book.units_sold;
-    std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << book.price;
+    double price;
+    std::cin >> book.bookNo >> book.units_sold >> price;
+    book.revenue = price * book.units_sold;
+    std::cout << book.bookNo << " " << book.units_sold << " " << book.revenue << " " << price;
 
     return 0;
 }

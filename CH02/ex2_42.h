@@ -11,10 +11,11 @@
 struct Sales_data
 {
     std::string bookNo;
-    unsigned units_sold = 0;
-    double revenue = 0.0;
+    unsigned units_sold = 0;  //总数量
+    double revenue = 0.0;  //总价
 
     void CalcRevenue(double price);
+    double CalcAveragePrice();
     void SetData(Sales_data data);
     void AddData(Sales_data data);
     void Print();
@@ -23,6 +24,15 @@ struct Sales_data
 void Sales_data::CalcRevenue(double price) {
     revenue = units_sold * price;
 
+}
+
+double Sales_data::CalcAveragePrice() {
+    if(units_sold != 0){
+        return revenue / units_sold;
+    }
+    else{
+        return 0.0;
+    }
 }
 
 void Sales_data::SetData(Sales_data data)
@@ -41,7 +51,13 @@ void Sales_data::AddData(Sales_data data)
 
 void Sales_data::Print()
 {
-    std::cout << bookNo << " " << units_sold << " " << revenue << " ";
+    std::cout <<"编号：" << bookNo << " 总数量：" << units_sold << " 总价：" << revenue << " ";
+    double averagePrice = CalcAveragePrice();
+    if (averagePrice != 0.0)
+        std::cout << "平均单价：" << averagePrice << std::endl;
+    else
+        std::cout << "(no sales)" << std::endl;
+
 }
 
 

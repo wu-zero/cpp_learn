@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "Sales_item.h"
+#include "../data/Sales_item.h"
 
 using std::cout;
 using std::cin;
