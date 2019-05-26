@@ -38,24 +38,62 @@
     当其他类或者函数想要访问当前类的私有变量时，这个时候应该用友元。  
     利：与当前类有关的接口函数能直接访问类的私有变量。  
     弊：牺牲了封装性与可维护性。  
-- [ ] 7.21  
-- [ ] 7.22  
-- [ ] 7.23
-- [ ] 7.24
+- [x] 7.21  
+- [x] 7.22  
+- [x] 7.23
+- [x] 7.24
 - [ ] 7.25
-- [ ] 7.26
-- [ ] 7.27
-- [ ] 7.28
-- [ ] 7.29
-- [ ] 7.30
+    能。Screen 的成员只有内置类型和 string，因此能安全地依赖于拷贝和赋值操作的默认版本。管理动态内存的类则不能依赖于拷贝和赋值操作的默认版本，而且也应该尽量使用string 和 vector 来避免动态管理内存的复杂性。  
+- [x] 7.26
+- [x] 7.27
+- [x] 7.28
+    如果返回类型是`Screen`，那么move返回的是`*this`的一个副本，因此`set`函数只能改变临时副本而不能改变`myScreen`的值。  
+- [x] 7.29
+    正确  
+- [x] 7.30
+    优点：意图更明显，函数的参数可以与成员同名。  
+    缺点：有时候显得有点多余。  
 - [ ] 7.31
-- [ ] 7.32
+    ```cpp
+    class Y;
+    class X{
+        Y* y = nullptr;
+    }
+    class Y{
+        X x;
+    }
+    ```
+- [x] 7.32
 - [ ] 7.33
-- [ ] 7.34
+    未定义标识符`pos`，改为：
+    ```cpp
+    Screen::pos Screen::size() const
+    {
+	    return height * width;
+    }
+    ```
+- [x] 7.34
+    在`dummy_fcn(pos height)`函数中会出现未定义的标识符`pos`。
 - [ ] 7.35
+    [答案](https://github.com/Mooophy/Cpp-Primer/issues/390#issuecomment-168286067)
 - [ ] 7.36
-- [ ] 7.37
-- [ ] 7.38
+    改为：
+    ```cpp
+    struct X {
+        X (int i, int j): base(i), rem(base % j) {}
+        int base, rem;
+    };
+    ```
+- [x] 7.37
+    ```cpp
+    Sales_data first_item(cin); // 使用 Sales_data(std::istream &is) ; 各成员值从输入流中读取
+    Sales_data next; // 使用默认构造函数  bookNo = "", cnt = 0, revenue = 0.0
+    Sales_data last("9-999-99999-9"); // 使用 Sales_data(std::string s = "");   bookNo = "9-999-99999-9", cnt = 0, revenue = 0.0S
+    ```
+- [x] 7.38
+    ```cpp
+    Sales_data(std::istream &is = std::cin) { read(is, *this); }
+    ```
 - [ ] 7.39
 - [ ] 7.40
 - [ ] 7.41
